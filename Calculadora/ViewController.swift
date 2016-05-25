@@ -10,6 +10,10 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var tfNumero1: UITextField!
+    @IBOutlet weak var tfNumero2: UITextField!
+    @IBOutlet weak var tfResultado: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -20,6 +24,22 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func actionSomar(sender: AnyObject) {
+        
+    }
 
+    @IBAction func actionSubtrair(sender: AnyObject) {
+        
+    }
+    
+    @IBAction func actionMultiplicar(sender: AnyObject) {
+        
+    }
+    
+    @IBAction func actionDividir(sender: AnyObject) {
+        
+    }
+    
+    
 }
 

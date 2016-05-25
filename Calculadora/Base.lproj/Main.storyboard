@@ -49,6 +49,9 @@
                                 <state key="normal" title="Somar">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="actionSomar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fkl-fM-Ui8"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bUV-Mc-xCs">
                                 <rect key="frame" x="20" y="458.5" width="272" height="125.5"/>
@@ -57,6 +60,9 @@
                                 <state key="normal" title="Subtrair">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="actionSubtrair:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nab-uy-mg2"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R5A-g7-KeB">
                                 <rect key="frame" x="308" y="324.5" width="272" height="126"/>
@@ -65,6 +71,9 @@
                                 <state key="normal" title="Multiplicar">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="actionMultiplicar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gY6-ZH-FsP"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j5r-6K-ioi">
                                 <rect key="frame" x="308" y="458.5" width="272" height="125"/>
@@ -73,6 +82,9 @@
                                 <state key="normal" title="Dividir">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="actionDividir:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jlF-hp-FeU"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -155,6 +167,11 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="tfNumero1" destination="YMD-DD-mNh" id="UAr-4C-Kp7"/>
+                        <outlet property="tfNumero2" destination="27W-AP-Rik" id="TeJ-dD-uyU"/>
+                        <outlet property="tfResultado" destination="h9l-sN-iEL" id="PKd-QR-ySy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
