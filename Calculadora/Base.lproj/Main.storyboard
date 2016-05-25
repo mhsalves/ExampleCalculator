@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Calculadora" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,112 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calculadora básica" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fZr-na-yKe">
+                                <rect key="frame" x="20" y="38" width="560" height="61.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Primeiro número" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YMD-DD-mNh">
+                                <rect key="frame" x="20" y="107.5" width="560" height="61.5"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Segundo número" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="27W-AP-Rik">
+                                <rect key="frame" x="20" y="178" width="560" height="61"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Resultado" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h9l-sN-iEL">
+                                <rect key="frame" x="20" y="248" width="560" height="61"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bV1-Ne-Ig8">
+                                <rect key="frame" x="20" y="317" width="560" height="60.5"/>
+                                <color key="backgroundColor" red="0.85098039219999999" green="0.32549019610000002" blue="0.039215686270000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Somar">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bUV-Mc-xCs">
+                                <rect key="frame" x="20" y="385.5" width="560" height="61"/>
+                                <color key="backgroundColor" red="0.0" green="0.26764382645259938" blue="0.53725490200000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Subtrair">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R5A-g7-KeB">
+                                <rect key="frame" x="20" y="454.5" width="560" height="61"/>
+                                <color key="backgroundColor" red="0.59433534021406731" green="0.48627450979999998" blue="0.91052656727828751" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Multiplicar">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j5r-6K-ioi">
+                                <rect key="frame" x="20" y="523.5" width="560" height="60.5"/>
+                                <color key="backgroundColor" red="0.0" green="0.7383887614678899" blue="0.79656441131498468" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Dividir">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="YMD-DD-mNh" firstAttribute="leading" secondItem="fZr-na-yKe" secondAttribute="leading" id="2Bl-7t-ogs"/>
+                            <constraint firstItem="j5r-6K-ioi" firstAttribute="top" secondItem="R5A-g7-KeB" secondAttribute="bottom" constant="8" id="4u9-4Q-XUu"/>
+                            <constraint firstItem="h9l-sN-iEL" firstAttribute="trailing" secondItem="27W-AP-Rik" secondAttribute="trailing" id="8Ys-HB-aiM"/>
+                            <constraint firstItem="fZr-na-yKe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="AXv-lu-6Hh"/>
+                            <constraint firstItem="YMD-DD-mNh" firstAttribute="trailing" secondItem="fZr-na-yKe" secondAttribute="trailing" id="AYH-ch-c5h"/>
+                            <constraint firstItem="h9l-sN-iEL" firstAttribute="top" secondItem="27W-AP-Rik" secondAttribute="bottom" constant="9" id="C6j-Ra-Ku1"/>
+                            <constraint firstItem="YMD-DD-mNh" firstAttribute="height" secondItem="fZr-na-yKe" secondAttribute="height" id="DFB-c3-YrK"/>
+                            <constraint firstItem="YMD-DD-mNh" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:8" id="FHe-zs-Ck5"/>
+                            <constraint firstItem="R5A-g7-KeB" firstAttribute="leading" secondItem="bUV-Mc-xCs" secondAttribute="leading" id="ITJ-7C-73R"/>
+                            <constraint firstItem="27W-AP-Rik" firstAttribute="trailing" secondItem="YMD-DD-mNh" secondAttribute="trailing" id="J0w-B2-JDg"/>
+                            <constraint firstItem="27W-AP-Rik" firstAttribute="top" secondItem="YMD-DD-mNh" secondAttribute="bottom" constant="9" id="KIm-1X-abo"/>
+                            <constraint firstItem="fZr-na-yKe" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:9" id="Kq8-iJ-J1E"/>
+                            <constraint firstItem="bV1-Ne-Ig8" firstAttribute="top" secondItem="h9l-sN-iEL" secondAttribute="bottom" constant="8" id="KxJ-DI-8Ys"/>
+                            <constraint firstItem="R5A-g7-KeB" firstAttribute="height" secondItem="bUV-Mc-xCs" secondAttribute="height" id="L9P-r5-5rz"/>
+                            <constraint firstItem="j5r-6K-ioi" firstAttribute="trailing" secondItem="R5A-g7-KeB" secondAttribute="trailing" id="Put-Jg-tHL"/>
+                            <constraint firstAttribute="trailing" secondItem="fZr-na-yKe" secondAttribute="trailing" constant="20" id="XfU-hL-Hrm"/>
+                            <constraint firstItem="bUV-Mc-xCs" firstAttribute="height" secondItem="bV1-Ne-Ig8" secondAttribute="height" id="ZI7-Hm-aNW"/>
+                            <constraint firstItem="j5r-6K-ioi" firstAttribute="height" secondItem="R5A-g7-KeB" secondAttribute="height" id="aJS-Z3-U9v"/>
+                            <constraint firstItem="bUV-Mc-xCs" firstAttribute="top" secondItem="bV1-Ne-Ig8" secondAttribute="bottom" constant="8" id="bam-G6-awQ"/>
+                            <constraint firstItem="R5A-g7-KeB" firstAttribute="trailing" secondItem="bUV-Mc-xCs" secondAttribute="trailing" id="d9I-XI-TBp"/>
+                            <constraint firstItem="bV1-Ne-Ig8" firstAttribute="trailing" secondItem="h9l-sN-iEL" secondAttribute="trailing" id="iKi-GY-0oC"/>
+                            <constraint firstItem="bV1-Ne-Ig8" firstAttribute="height" secondItem="h9l-sN-iEL" secondAttribute="height" id="jTi-Ec-F44"/>
+                            <constraint firstItem="fZr-na-yKe" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="18" id="jcd-qg-GMc"/>
+                            <constraint firstItem="27W-AP-Rik" firstAttribute="leading" secondItem="YMD-DD-mNh" secondAttribute="leading" id="jlo-oq-Tgz"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="j5r-6K-ioi" secondAttribute="bottom" constant="16" id="mtH-sa-cKy"/>
+                            <constraint firstItem="j5r-6K-ioi" firstAttribute="leading" secondItem="R5A-g7-KeB" secondAttribute="leading" id="o4P-TW-46K"/>
+                            <constraint firstItem="h9l-sN-iEL" firstAttribute="height" secondItem="27W-AP-Rik" secondAttribute="height" id="pUz-nF-9kv"/>
+                            <constraint firstItem="YMD-DD-mNh" firstAttribute="top" secondItem="fZr-na-yKe" secondAttribute="bottom" priority="999" constant="8" id="qPA-Ih-U4r"/>
+                            <constraint firstItem="h9l-sN-iEL" firstAttribute="leading" secondItem="27W-AP-Rik" secondAttribute="leading" id="qal-Lr-Nwy"/>
+                            <constraint firstItem="bV1-Ne-Ig8" firstAttribute="leading" secondItem="h9l-sN-iEL" secondAttribute="leading" id="rrq-On-YoJ"/>
+                            <constraint firstItem="R5A-g7-KeB" firstAttribute="top" secondItem="bUV-Mc-xCs" secondAttribute="bottom" constant="8" id="sl7-KX-41t"/>
+                            <constraint firstItem="bUV-Mc-xCs" firstAttribute="trailing" secondItem="bV1-Ne-Ig8" secondAttribute="trailing" id="tyc-4k-cCt"/>
+                            <constraint firstItem="27W-AP-Rik" firstAttribute="height" secondItem="YMD-DD-mNh" secondAttribute="height" id="x3H-TC-Kxj"/>
+                            <constraint firstItem="bUV-Mc-xCs" firstAttribute="leading" secondItem="bV1-Ne-Ig8" secondAttribute="leading" id="yl6-2K-G9J"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Kq8-iJ-J1E"/>
+                                <exclude reference="FHe-zs-Ck5"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="375" y="299"/>
         </scene>
     </scenes>
 </document>
